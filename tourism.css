@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock+SC&family=Spinnaker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Overlock+SC&family=Spinnaker&display=swap');
+
+
+.background{
+    
+    background-image: url("./assets/sylwia-bartyzel-eU4pipU_8HA-unsplash.jpg");
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card{
+    width: 400px;
+    height: 150px;
+    background-color: white;
+}
+.heading{
+    font-family: "Spinnaker", sans-serif;
+    text-transform: uppercase;
+    color: rgb(173, 120, 41);
+    font-size: x-large;
+    font-weight: bolder;
+    
+}
+
+.subtitle{
+    font-family: "Overlock SC", sans-serif ;
+    color: rgb(226, 202, 156);
+    font-size: larger;
+    font-weight: 700;
+}
+
+.button{
+    background-color: rgb(201, 150, 132);
+    color: antiquewhite;
+    font-size: medium;
+    font-family: "Briem Hand", cursive;
+}

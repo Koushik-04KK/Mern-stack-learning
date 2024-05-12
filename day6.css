@@ -1,0 +1,59 @@
+.heading{
+    font-family: "Spinnaker", sans-serif;
+    color: rgb(196, 48, 105);
+    font-size: xx-large;
+    font-weight: 700;
+    margin-top: 10px;
+    
+}
+
+.subtitle{
+    font-family: "Overlock SC", sans-serif ;
+    margin-top: 15px;
+    color: rgb(173, 40, 106);
+    font-size: larger;
+}
+
+.button{
+    font-family: "Briem Hand", cursive;
+    color: white;
+    background-color: rgb(240, 122, 167);
+    border-radius: 20px;
+    height: 35px;
+    width: 120px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    border-width: 2px;
+    padding-right:5px ;
+    padding-left: 5px;
+    border-color: rgb(255, 255, 255);
+}
+
+.card{
+    
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    border-color: rgb(245, 140, 157);
+    border-width: 3px;
+    border-style: solid;
+    background-image: url("./assets/c29ad93c7ddc9a17cc6d591b7c7b01c3.jpg");
+}
+
+.bg{
+    background-image: url("./assets/103974251.jpeg");
+    height: 800px;
+    width: 600px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(245, 140, 157);
+}
+
+.iconic-bg{
+    background-image: url("./assets/photo-1587474260584-136574528ed5.jpg");
+    height: 900px;
+    width: 800px;
+    background-repeat: no-repeat;
+
+}

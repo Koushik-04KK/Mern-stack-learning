@@ -5,3 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Teko:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+.background{
+    background-image: url('./assets/FlavorDash/herosection/foodmunch-banner-bg.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bt{
+    border-color: #FFBF00;
+    border-width: 2px;
+
+}

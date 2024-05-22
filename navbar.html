@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="2xl:container bg-[#0B3C49]">
+        <div class="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 bg-[#0B3C49] ">
+            <div class="flex justify-between items-center md:justify-center md:items-center h-[10vh]">
+                <img src="./assets/FlavorDash/Screenshot_2024-05-14_223329-removebg-preview.png" alt="imga" class=" h-14 md:h-14 md:p-1">
+                <div class=" pr-4 md:hidden">
+                    <svg fill="none" viewbox="0 0 15 15" height="20px" width="20px" id="menuele" >
+                        <path
+                          fill="#E1B83A"
+                          fillrule="evenodd"
+                          d="M1.5 3a.5.5 0 000 1h12a.5.5 0 000-1h-12zM1 7.5a.5.5 0 01.5-.5h12a.5.5 0 010 1h-12a.5.5 0 01-.5-.5zm0 4a.5.5 0 01.5-.5h12a.5.5 0 010 1h-12a.5.5 0 01-.5-.5z"
+                          cliprule="evenodd"
+                        />
+                      </svg>
+                      <svg fill="none" viewbox="0 0 15 15" height="20px" width="20px" class="hidden" id="crossele">
+                        <path
+                          fill="#E1B83A"
+                          fillrule="evenodd"
+                          d="M11.782 4.032a.575.575 0 10-.813-.814L7.5 6.687 4.032 3.218a.575.575 0 00-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 00.814.814L7.5 8.313l3.469 3.469a.575.575 0 00.813-.814L8.313 7.5l3.469-3.468z"
+                          cliprule="evenodd"
+                        />
+                      </svg>
+                </div>
+            </div>
+            
+            <div class=" bg-slate-100 hidden md:block " id="cont" >
+                <ul class=" flex flex-col justify-center items-center space-y-3 md:flex-row md:justify-center md:items-center md:h-[100%] md:space-x-10">
+                    <li id="wcu">Why Choose Us?</li>
+                    <li id="em" class="md:pb-3">Explore Menu</li>
+                    <li id="dp"class="md:pb-3">Delivery & Payment</li>
+                    <li id="fu"class="md:pb-3">Follow Us</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        const menuelement=document.getElementById("menuele")
+        const crosselement=document.getElementById("crossele")
+        const content =document.getElementById("cont")
+        const id1=document.getElementById("wcu")
+        const id2=document.getElementById("em")
+        const id3=document.getElementById("dp")
+        const id4=document.getElementById("fu")
+        menuelement.addEventListener("click",()=>{
+            content.classList.remove("hidden")
+            crosselement.classList.toggle("hidden")
+            menuelement.classList.toggle("hidden")
+        })
+        crosselement.addEventListener("click",()=>{
+            content.classList.add("hidden")
+            crosselement.classList.toggle("hidden")
+            menuelement.classList.toggle("hidden")
+        })
+        id1.addEventListener("click",()=>{
+            content.classList.toggle("hidden")
+            crosselement.classList.toggle("hidden")
+            menuelement.classList.toggle("hidden")
+        })
+        id2.addEventListener("click",()=>{
+            content.classList.toggle("hidden")
+            crosselement.classList.toggle("hidden")
+            menuelement.classList.toggle("hidden")
+        })
+        id3.addEventListener("click",()=>{
+            content.classList.toggle("hidden")
+            crosselement.classList.toggle("hidden")
+            menuelement.classList.toggle("hidden")
+        })
+        id4.addEventListener("click",()=>{
+            content.classList.toggle("hidden")
+            crosselement.classList.toggle("hidden")
+            menuelement.classList.toggle("hidden")
+        })
+    
+    </script>
+    
+</body>
+</html>

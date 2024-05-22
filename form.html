@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <form id="form">
+        <div>
+            <label for="name">Name</label>
+            <input placeholder="Enter name" type="text" id="name"/>
+            <p id="nerror"></p>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input placeholder="Enter email" id="email"/>
+            <p id="eerror"></p>
+        </div>
+        <div>
+            <label for="pw">Password</label>
+            <input placeholder="Enter password" type="password" id="pw"/>
+            <p id="perror"></p>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        const name=document.getElementById("name")
+        const email=document.getElementById("email")
+        const pw=document.getElementById("pw")
+        const form=document.getElementById("form")
+        const nerror=document.getElementById("nerror")
+        const eerror=document.getElementById("eerror")
+        const perror=document.getElementById("perror")
+        email.addEventListener("blur",()=>{
+            eerror.textContent="*required"
+        })
+        function savedata(name,email,password){
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyCp3PlQGqvU8q3UPYUu6BREcmz7U5iJ7mg",
+        authDomain: "form-validation-koushik.firebaseapp.com",
+        databaseURL: "https://form-validation-koushik-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "form-validation-koushik",
+        storageBucket: "form-validation-koushik.appspot.com",
+        messagingSenderId: "203319232733",
+        appId: "1:203319232733:web:a59679fc09059518e63334"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+      // It will Create a Root of JSON Tree
+      const db = firebase.database().ref("ReqForm");
+
+      // save the Method to DB [ it take data in Form of JSON ]
+      db.push({
+        name: name,
+        email: email,
+        password: password,
+      });
+                }
+        function valid(email){
+            email_regex="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+            if(email.match(email_regex)){
+                console.log("Yes its valid")
+            }
+            else{
+                console.log("No")
+            }
+        }
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            console.log(name.value,email.value,pw.value)
+            valid(email.value)
+            savedata(name.value,email.value,pw.value)
+        })
+    </script>
+</body>
+</html>
